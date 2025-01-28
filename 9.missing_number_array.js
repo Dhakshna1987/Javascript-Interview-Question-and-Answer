@@ -1,5 +1,6 @@
 
-//Missing number in Array
+//Find the missing number in an array of size `n-1` containing numbers from 1 to `n`.
+
 
 //example1: sum formula method
 

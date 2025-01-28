@@ -1,4 +1,5 @@
-//Find the first non-repeating character in a string
+//Find the first non-repeating character in a string.
+
 
 
 function firstNonRepeatingCharacter(str) {

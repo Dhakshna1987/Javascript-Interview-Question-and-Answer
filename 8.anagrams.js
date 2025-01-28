@@ -1,4 +1,5 @@
-//Find the two string is a anagrams?
+//Write a function to check if two strings are anagrams.
+
 
 //listen, silent
 //rat, art
