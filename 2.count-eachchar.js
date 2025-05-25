@@ -19,5 +19,5 @@ function countCharacterOccurance(str) {
 const inputString = "google chrome";
 const characterCounts = countCharacterOccurance(inputString);
 
-console.log(characterCounts);
+console.log(characterCounts);//{ g: 2, o: 3, l: 1, e: 2, ' ': 1, c: 1, h: 1, r: 1, m: 1 }
 

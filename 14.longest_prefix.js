@@ -25,5 +25,5 @@ function longestCommonPrefix(strArray) {
 }
 
 
-console.log(longestCommonPrefix(['flower', 'flow', "flight"]));
-console.log(longestCommonPrefix(['interspecties', 'intersterllar' ,'interstate']));
+console.log(longestCommonPrefix(['flower', 'flow', "flight"])); //fl
+console.log(longestCommonPrefix(['interspecties', 'intersterllar' ,'interstate'])); //inters

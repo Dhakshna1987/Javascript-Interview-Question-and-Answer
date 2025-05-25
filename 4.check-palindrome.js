@@ -17,5 +17,7 @@ function isPalindrome(str) {
     return cleanedStr === reverseString(cleanedStr);
 }
 
-console.log(isPalindrome("level"));
-console.log(isPalindrome("tree"));
+console.log(isPalindrome("level")); //true
+console.log(isPalindrome("tree")); //false
+    
+    console.log(checPalindrome("madam")); //true

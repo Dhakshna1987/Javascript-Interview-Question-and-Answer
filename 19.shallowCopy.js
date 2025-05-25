@@ -1,31 +1,30 @@
 
+// In JavaScript, shallow copy and deep copy are ways to duplicate objects or arrays. 
+// The key difference is how they handle nested structures.
 
-const obj = {
-    name: 'John',
-    age: 30,
-    address: {
-        city: "New York",
-        zip: 15422
-    },
-    hobbies: ['reading', 'gaming'],
-    greet: () => {
-        console.log('Hello')
+// Shallow Copy
+// A shallow copy creates a new object, but it only copies references for nested objects/arrays instead of duplicating them. 
+// Changes in the nested structures of the copied object will also reflect in the original object.
+
+
+
+let obj = {
+    name: "Thakshan",
+    age:38,
+    address:{
+        address1: "43/a mummurthy nagar",
+        address2: "chrompet",
+        zipCode: 600044
     }
-};
+}
 
-const cloneObj = {...obj}; //shallow copy
 
-cloneObj.age = 50;
+let newObj = Object.assign({},obj) 
+// or {...obj}
 
-obj.address.city = 'Los angels',
-obj.hobbies.push('swimming'),
-
-//shallow copy
-console.log(obj.address.city); //Los angels
-console.log(obj.hobbies); // [ 'reading', 'gaming', 'swimming' ]
+newObj.address.zipCode = 600045
+newObj.age = 40;
+console.log(newObj.address.zipCode)
+console.log(obj.address.zipCode)
+console.log(newObj.age)
 console.log(obj.age)
-console.log(cloneObj.address.city); //Los angels
-console.log(cloneObj.hobbies); //[ 'reading', 'gaming', 'swimming' ]
-console.log(cloneObj);
-//Deep copy
-

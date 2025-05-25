@@ -1,0 +1,23 @@
+Instance method = the method can only be used if you've instantiated (created) the object first. 
+Static method = the method can be used without creating an instance of the object. 
+Useful if you for example want to use the method within the same class. 
+
+
+class Person {
+		constructor() {
+			this.Name = "ABCD";
+		}
+	}
+	var person = new Person();
+	console.log(person.Name); // Output: ABCD
+	console.log(Person.Name); // Output: undefined
+
+
+class Person {
+		static Name = "ABCD";
+	}
+
+	var person = new Person();
+	console.log(person.Name); // Output: undefined
+	console.log(Person.Name); // Output: ABCD
+

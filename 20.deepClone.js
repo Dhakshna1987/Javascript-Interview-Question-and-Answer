@@ -1,55 +1,21 @@
-const obj = {
-    name: 'John',
-    age: 30,
-    address: {
-        city: "New York",
-        zip: 15422
-    },
-    hobbies: ['reading', 'gaming'],
-    greet: () => {
-        console.log('Hello')
-    }
-};
+// Deep Copy
+// A deep copy creates a completely independent duplicate, including all nested objects. 
+// Changes in the copied object won't affect the original.
 
-
-function deepClone(obj) {
-
-    if(obj === null || typeof obj !== 'object'){
-        return obj;
-    }
-
-    //handle array case
-
-    if ( Array.isArray(obj)){
-        const arrCopy = [];
-
-        for (let i=0; i<obj.length; i++){
-            arrCopy[i] = deepClone(obj[i]);
+    let obj1 = {
+        name: "John",
+        details: {
+        age: 25,
+        city: "New York"
         }
-        return arrCopy;
-    }
+    };
 
-    //handle Object case
+    let deepCopy = structuredClone(obj1);
+    // or
+    // let deepCopy = JSON.parse(JSON.stringify(obj1));
 
-  const objCopy = {};
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-        objCopy[key] = deepClone(obj[key]);        
-    }
-  }
-  return objCopy;
-}
+    deepCopy.details.age = 30;
 
-const cloneObj = deepClone(obj);
-
-obj.address.city = "Los Angeles";
-obj.hobbies.push("Swimming");
-
-console.log(obj.address.city); //Los Angeles
-console.log(cloneObj.address.city); //New York
-
-console.log(obj.hobbies); //[ 'reading', 'gaming', 'Swimming' ]
-console.log(cloneObj.hobbies) //[ 'reading', 'gaming' ]
-
-
+    console.log(obj1.details.age);
+    console.log(deepCopy.details.age);
 

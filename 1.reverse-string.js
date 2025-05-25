@@ -15,4 +15,4 @@ function reverseString(str) {
 }
 
 let result = reverseString(originalString);
-console.log(result);
+console.log(result); //olleh

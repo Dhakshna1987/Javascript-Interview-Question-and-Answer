@@ -12,6 +12,6 @@ function intersection(arr1, arr2) {
 }
 
 
-console.log(intersection([1,2,2,3], [2,2]));
-console.log(intersection([4,9,4,5], [9,4,6,7,7]));
+console.log(intersection([1,2,2,3], [2,2])); //[ 2 ]
+console.log(intersection([4,9,4,5], [9,4,6,7,7])); //[ 9, 4 ]
 
